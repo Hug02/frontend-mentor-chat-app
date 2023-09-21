@@ -1,0 +1,179 @@
+/****************************************************
+*                                                   *
+*                     Reset                         *
+*                                                   *
+*  https://andy-bell.co.uk/a-more-modern-css-reset  *
+*                                                   *
+****************************************************/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Rubik";
+  font-weight: 400;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/************************
+*                       *
+*       Variables       *
+*                       *
+************************/
+/************************
+*                       *
+*      Components       *
+*                       *
+************************/
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  background-color: black;
+}
+
+.phone {
+  width: 19rem;
+  height: 40rem;
+  background-color: hsl(270, 20%, 96%);
+  border-radius: 2.5rem;
+  border: 1rem white solid;
+  position: relative;
+  overflow: hidden;
+}
+.phone::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  border-radius: 1rem;
+  height: 3.25rem;
+  width: 11rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 0;
+}
+.phone .app-header {
+  padding: 0.6rem 0.8rem;
+  padding-top: 2rem;
+  min-height: 4rem;
+  background-color: hsl(264, 100%, 61%);
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.phone .app-header .fa-chevron-left {
+  color: white;
+}
+.phone .app-header .avatar-wrapper {
+  max-width: 15%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px white solid;
+}
+.phone .app-header .user-info {
+  display: flex;
+  flex-direction: column;
+}
+.phone .app-header .user-info .username {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.phone .app-header .user-info .status {
+  color: hsl(276, 100%, 81%);
+  font-size: 0.65rem;
+}
+.phone main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.phone .message {
+  max-width: 75%;
+  padding: 0.6rem;
+  border-radius: 0.8rem;
+  font-size: 0.7rem;
+  display: inline-block;
+}
+.phone .message--left {
+  background-color: hsla(293, 100%, 63%, 0.05);
+  color: hsl(276, 55%, 52%);
+  border-bottom-left-radius: 0.4rem;
+  align-self: flex-start;
+}
+.phone .message--right {
+  background-color: white;
+  color: hsl(271, 15%, 43%);
+  border-bottom-right-radius: 0.4rem;
+  align-self: flex-end;
+}
+
+/*# sourceMappingURL=style.css.map */
