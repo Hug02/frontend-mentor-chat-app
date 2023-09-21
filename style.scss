@@ -272,7 +272,9 @@ $clr-font-right-chat: hsl(271, 15%, 43%);
             &::placeholder {
                 color: rgb(123 119 119 / .4);
             }
-
+            &:focus-visible {
+                outline: none;
+            }
             
         }
 

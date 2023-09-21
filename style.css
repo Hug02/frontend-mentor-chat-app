@@ -243,6 +243,9 @@ textarea:not([rows]) {
 .phone .input-message input::placeholder {
   color: rgba(123, 119, 119, 0.4);
 }
+.phone .input-message input:focus-visible {
+  outline: none;
+}
 .phone .input-message .fa-circle-chevron-right {
   font-size: 1.6rem;
   color: hsl(271, 36%, 24%);
